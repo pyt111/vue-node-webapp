@@ -9,7 +9,7 @@ const isProduction = process.env.NODE_ENV === 'production';
 const tempFolder = resolve('./');
 
 module.exports = {
-  publicPath: './',
+  publicPath: '/vue-webapp',
   chainWebpack: (config) => {
     if (isProduction) {
       // 创建zip包, 用于发布
