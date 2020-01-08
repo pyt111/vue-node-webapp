@@ -1,6 +1,9 @@
-agent {
-  docker {
-    args '-p 8089:8089'
-    image 'node:alpin'
+Pipeline {
+  agent {
+    docker {
+      args '-p 8089:8089'
+      image 'node:alpin'
+    }
   }
 }
+
