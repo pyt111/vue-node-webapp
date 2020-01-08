@@ -1,4 +1,4 @@
-Pipeline {
+pipeline {
   agent {
     docker {
       args '-p 8089:8089'
