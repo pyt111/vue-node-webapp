@@ -8,9 +8,6 @@ pipeline {
     stages {
            stage('pwd') {
                steps {
-                    sh 'pwd'
-               }
-               steps {
                     sh 'ls'
                }
            }
