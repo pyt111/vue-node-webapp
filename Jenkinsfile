@@ -7,8 +7,9 @@ pipeline {
         sh 'ls'
       }
     }
-   stage('Deploy') {
-      sshPublisher(
+  stage('Deploy') {
+    steps {
+        sshPublisher(
         publishers: [
           sshPublisherDesc(
             configName: 'pyt111_server',
