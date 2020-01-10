@@ -1,11 +1,5 @@
 pipeline {
-  agent {
-    docker {
-      image 'node:alpine'
-      args '-p 8089:8089'
-    }
-
-  }
+  agent any
   stages {
     stage('test') {
       steps {
@@ -23,7 +17,9 @@ pipeline {
                 cleanRemote: false,
                 excludes: '',
                 execCommand: '''
-                  cd /root/tt2/public tar xzf /root/tt2/vue_node_web.zip -C /root/tt2/public ''',
+                  cd /root/tt2/public
+                  unzip /root/tt2/vue_node_web.zip  /root/tt2/public
+                  ''',
                   execTimeout: 120000,
                   flatten: false,
                   makeEmptyDirs: false,
