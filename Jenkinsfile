@@ -19,7 +19,7 @@ pipeline {
                     excludes: '',
                     execCommand: '''
                       cd /root/tt2/public
-                      unzip /root/tt2/vue_node_web.zip  /root/tt2/public
+                      unzip /root/tt2/public/vue_node_web.zip  /root/tt2/public
                       ''',
                       execTimeout: 120000,
                       flatten: false,
